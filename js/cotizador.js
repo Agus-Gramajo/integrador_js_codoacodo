@@ -87,7 +87,12 @@ pagar.addEventListener('click', function () {
     //Variables usuario
     var nombre = document.getElementById('nombre').value;
     var mail = document.getElementById('email').value;
-    
+
+   if(nombre !== "" && mail !== "") {
     alert(nombre + "gracias por tu pedido. Te va a llegar un link de pago a la direccion de mail: " + mail);
+   }else {
+       alert ("Por favor completa tu nombre y mail para recibir link de pago")
+   }
+    
 })
 
