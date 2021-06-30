@@ -15,13 +15,11 @@ const porcDesc = 0.93
 
 
 //Variables para mostrar resumen de pedido
-var listaProd = getElementById('lista-productos');
 var resumen_pase_dia = document.getElementById('resumen_pase_dia');
 var resumen_pase_completo = document.getElementById('resumen_pase_completo');
 var resumen_pase_dosdias = document.getElementById('resumen_pase_dosdias');
 var resumen_camisa = document.getElementById('resumen_camisa');
 var resumen_etiqueta = document.getElementById('resumen_etiqueta');
-var resumen_descuento = document.getElementById('detalle-descuento')
 
 const calcularBtn = document.getElementById('calcular');
 const pagar = document.getElementById('btnRegistro');
