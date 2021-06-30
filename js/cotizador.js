@@ -49,8 +49,7 @@ calcularBtn.addEventListener('click', function() {
 
     //Generacion de resumen
 
-    var detallePedido = document.querySelector('#lista-productos');
-    detallePedido.textContent = ('Cantidad de pases por un dia: ' + pase_dia);
+    resumen_pase_dia.textContent = ('Total de pases por dia: ' + pase_dia)
     
 
     //Total
