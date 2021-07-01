@@ -51,10 +51,11 @@ calcularBtn.addEventListener('click', function() {
     regalo.style.fontStyle = 'italic';
     switch (regalo.value) {
         case '2': resumen_regalo.innerHTML = 'Seleccionaste etiquetas de regalo'
-            break;
-            case '1': resumen_regalo.innerHTML = 'Seleccionaste pulseras de regalo'
-            break;
-        default: resumen_regalo.innerHTML = 'Seleccionaste plumass de regalo'
+        break;
+        case '1': resumen_regalo.innerHTML = 'Seleccionaste pulseras de regalo'
+        break;
+        case '3': resumen_regalo.innerHTML = 'Seleccionaste plumas de regalo'
+        default: resumen_regalo.innerHTML = ''
             break;
     }
 
@@ -70,17 +71,32 @@ calcularBtn.addEventListener('click', function() {
     
     //Generacion de resumen
     listaProductos.style.display = 'grid';
-    if(pase_dia.value !== '0') {
+    if(pase_dia !== '0') {
         resumen_pase_dia.textContent = ('Pases por dia (viernes): ' + pase_dia);
     }else {
         resumen_pase_dia.textContent = ("");
-    }
+    };
+    if(pase_completo !== '0') {
+        resumen_pase_completo.textContent = ('Pases por todos los dias: ' + pase_completo);
+    }else {
+        resumen_pase_completo.textContent = ("");
+    };
+    if(pase_dosdias !== '0') {
+        resumen_pase_dosdias.textContent = ('Pases por dos dias (viernes y sabado): ' + pase_dosdias);
+    }else {
+        resumen_pase_dosdias.textContent = ("");
+    };
+    if(cantCamisa !== '0') {
+        resumen_camisa.textContent = ('Camisas del evento: ' + cantCamisa);
+    }else {
+        resumen_camisa.textContent = ("");
+    };
+    if(cantEtiqueta !== '0') {
+        resumen_etiqueta.textContent = ('Paquetes de etiquetas: ' + cantEtiqueta);
+    }else {
+        resumen_etiqueta.textContent = ("");
+    };
     
-    resumen_pase_completo.textContent = ('Pases por todos los dias: ' + pase_completo);
-    resumen_pase_dosdias.textContent = ('Pases por dos dias (viernes y sabado): ' + pase_dosdias);
-    resumen_camisa.textContent = ('Camisas del evento: ' + cantCamisa);
-    resumen_etiqueta.textContent = ('Paquetes de etiquetas: ' + cantEtiqueta);
-
 });
 
 pagar.addEventListener('click', function () {
@@ -89,7 +105,7 @@ pagar.addEventListener('click', function () {
     var mail = document.getElementById('email').value;
 
    if(nombre !== "" && mail !== "") {
-    alert(nombre + "gracias por tu pedido. Te va a llegar un link de pago a la direccion de mail: " + mail);
+    alert(nombre + " gracias por tu pedido. Te va a llegar un link de pago a la direccion de mail: " + mail);
    }else {
        alert ("Por favor completa tu nombre y mail para recibir link de pago")
    }

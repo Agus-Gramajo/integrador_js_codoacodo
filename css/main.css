@@ -1227,3 +1227,7 @@ table.registrados tr:nth-child(4n-1) {
 #lista-productos table {
   width: 100%;
 }
+
+#detalleTotalOrden {
+  display: grid !important;
+}
